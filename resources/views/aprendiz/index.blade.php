@@ -64,8 +64,11 @@
                                         <form  action="{{ route('aprendiz.destroy', $aprendiz->id) }}" method="POST">
 
                                             @can('editar-aprendiz')
-                                            <a class="btn btn-info" href="{{route('aprendiz.edit', $aprendiz->id)}}">Editar</a>
+                                            <a class="btn btn-info mt-1" href="{{route('aprendiz.edit', $aprendiz->id)}}">Editar</a>
+                                            
                                             @endcan
+                                        
+                                            <a style="width: 150px" class="btn btn-warning mt-2 mb-2" href="{{route('aprendiz.show', $aprendiz->id)}}">Hoja de vida</a>
                                             @csrf
 
 
@@ -92,5 +95,40 @@
             </div>
         </div>
     </div>
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </section>
 @endsection

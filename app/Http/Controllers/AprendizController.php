@@ -96,7 +96,14 @@ class AprendizController extends Controller
      */
     public function show($id)
     {
-        //
+        $aprendiz_show = Aprendiz::find($id);
+        
+       view()->share('aprendiz.show',$aprendiz_show);
+
+        $pdf = PDF::loadView('aprendiz.show', ['aprendiz_show' => $aprendiz_show]);
+
+        return $pdf->download('ListAprendices.pdf');
+
     }
 
     /**
@@ -173,6 +180,7 @@ class AprendizController extends Controller
     {
 
         $aprendiz_index = Aprendiz::all();
+        
 
        view()->share('aprendiz.pdf',$aprendiz_index);
 
