@@ -72,7 +72,6 @@ a {
     color: #fd7e14;
     font-weight: 500;
     transition: all .5s;
-    -webkit-transition: all .5s;
     -o-transition: all .5s;
 }
 
